@@ -27,13 +27,13 @@ npm run dev  //執行程式
 
 ## 使用工具
 
-- 檔案管理
+檔案管理
 * npm：7.7.6
 + express: 4.17.1
 - express handlebars: 5.3.2
 * nodemon: 2.0.9
 
-- 視覺呈現
+視覺呈現
 * jquery: 3.6.0
 + popper: v2.9.1
 - bootstrap: v4.6.0
