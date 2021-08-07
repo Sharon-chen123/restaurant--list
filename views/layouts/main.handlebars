@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant List</title>
+  <!-- for bootstrap -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <!-- for font-awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <!-- for css -->
+  <link href="/css/{{style}}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <header>
+    <!-- navigation -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png"
+            width="30" height="30" class="d-inline-block align-top" alt="我的餐廳清單">
+          我的餐廳清單
+        </a>
+      </div>
+    </nav>
+
+    <div class="banner"></div>
+  </header>
+
+  <!-- partial templates will replace the part of "body" here -->
+  {{{ body }}}
+  <!-- for bootstrap -->
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/jquery-3.6.0.min.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+
+</body>
+
+</html>
