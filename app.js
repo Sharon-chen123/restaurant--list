@@ -86,6 +86,32 @@ app.get('/restaurants/:restaurant_id/edit', (req, res) => {
     })
     .catch(error => console.log(error))
 })
+
+// for edit outcome
+app.post('/restaurants/:restaurant_id/edit', (req, res) => {
+  const id = req.params.restaurant_id
+  const name = req.body.name
+  const category = req.body.category
+  const rating = req.body.rating
+  const location = req.body.location
+  const phone = req.body.phone
+  const description = req.body.description
+  const image = req.body.image
+  return Restaurant.findById(id)
+    .then(restaurant => {
+      restaurant.name = name
+      restaurant.category = category
+      restaurant.rating = rating
+      restaurant.location = location
+      restaurant.phone = phone
+      restaurant.description = description
+      restaurant.image = image
+      return restaurant.save()
+    })
+    .then(restaurant => res.redirect(`/restaurants/${id}/detail`))
+    .catch(error => console.log(error))
+})
+
 // for delete function
 app.post('/restaurants/:restaurant_id/delete', (req, res) => {
   const id = req.params.restaurant_id
